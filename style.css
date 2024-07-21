@@ -1,3 +1,4 @@
+/* Styles généraux pour la page */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -18,96 +19,172 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000; /* Ensure header is above other content */
 }
 
-header nav ul {
+header .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+header .game-logo {
+    height: 70px;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    margin: 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
-header nav ul li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     text-decoration: underline;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+}
+
+.player-avatar {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.player-details p {
+    margin: 0;
+    color: #333;
 }
 
 main {
     flex: 1;
-    padding-top: 100px; /* To account for the fixed header */
-    width: 80%;
+    padding-top: 120px; /* Increased padding to account for header and additional space */
+    width: 90%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section {
+/* Forum Styles */
+.forum {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Channel Selection */
+.channel-list {
+    margin-bottom: 20px;
+}
+
+.channel-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.channel-button:hover {
+    background-color: #45a049;
+}
+
+/* Channel Content */
+.channel-content {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-section h2 {
-    margin-top: 0;
-}
-
-article, .forum-topic {
-    margin-bottom: 20px;
     text-align: left;
-}
-
-article h3, .forum-topic h3 {
-    margin: 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    max-width: 400px;
-    margin-top: 20px;
 }
 
-form label, form input, form button, form p {
-    width: 100%;
-    max-width: 300px;
+.news-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
 
-form input, form button {
+/* Channel Form */
+.channel-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.channel-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.channel-form label {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.channel-form input, .channel-form textarea, .channel-form button {
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
-form button {
+.channel-form button {
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-form button:hover {
+.channel-form button:hover {
     background-color: #45a049;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -117,8 +194,4 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-footer p {
-    margin: 0;
 }

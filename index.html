@@ -4,45 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="game-logo.png" alt="Game Logo" class="game-logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Jeu</a></li>
                 <li><a href="#">Boutique</a></li>
-                <li><a href="#">Forum</a></li>
+                <li><a href="forum.html">Forum</a></li>
                 <li><a href="#">Aide</a></li>
             </ul>
         </nav>
+        <div class="player-info">
+            <img src="player-avatar.png" alt="Player Avatar" class="player-avatar">
+            <div class="player-details">
+                <p><span id="username">Player123</span></p>
+                <p><span id="money">1000</span></p>
+                <p><span id="experience">50</span>/<span id="level">3</span></p>
+            </div>
+        </div>
     </header>
-    
+
     <main>
         <section class="news">
             <h2>Actualités</h2>
-            <article>
-                <h3>Titre de l'actualité</h3>
-                <p>Contenu de l'actualité...</p>
-            </article>
-            <article>
-                <h3>Titre de l'actualité</h3>
-                <p>Contenu de l'actualité...</p>
-            </article>
-        </section>
-        
-        <section class="forum">
-            <h2>Forum</h2>
-            <div class="forum-topic">
-                <h3>Sujet du forum</h3>
-                <p>Détails du sujet...</p>
-            </div>
-            <div class="forum-topic">
-                <h3>Sujet du forum</h3>
-                <p>Détails du sujet...</p>
+            <div id="newsContainer">
+                <!-- Les actualités seront chargées ici par JavaScript -->
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Mon Jeu en Ligne</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>

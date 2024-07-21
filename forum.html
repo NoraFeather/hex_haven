@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="game-logo.png" alt="Game Logo" class="game-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Jeu</a></li>
+                <li><a href="shop.html">Boutique</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="help.html">Aide</a></li>
+            </ul>
+        </nav>
+        <div class="player-info">
+            <img src="player-avatar.png" alt="Player Avatar" class="player-avatar">
+            <div class="player-details">
+                <p><span id="username">Player123</span></p>
+                <p><span id="money">1000</span></p>
+                <p><span id="experience">50</span>/<span id="level">3</span></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="channelSelection" class="forum">
+            <h2>Choisissez un Channel</h2>
+            <div id="channelButtons">
+                <!-- Buttons for each channel will be inserted here by JavaScript -->
+            </div>
+        </section>
+        <section id="channelContent" class="forum" style="display:none;">
+            <h2>Messages</h2>
+            <div id="messagesContainer">
+                <!-- Messages will be inserted here by JavaScript -->
+            </div>
+            <h3>Poster un message</h3>
+            <div class="channel-form">
+                <form id="messageForm">
+                    <label for="messageTitle">Titre</label>
+                    <input type="text" id="messageTitle" required>
+                    <label for="messageContent">Contenu</label>
+                    <textarea id="messageContent" rows="4" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
